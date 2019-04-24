@@ -1,5 +1,9 @@
 package usecase
 
+import (
+	"github.com/ngiyshhk/golang-clean-arch-service/model"
+)
+
 type HogeUsecase interface {
-	Create() (bool, error)
+	Create(entity *model.Fuga) (bool, error)
 }

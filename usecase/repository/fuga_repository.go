@@ -1,5 +1,7 @@
 package repository
 
+import "github.com/ngiyshhk/golang-clean-arch-service/model"
+
 type FugaRepository interface {
-	Insert() (bool, error)
+	Insert(entity *model.Fuga) (bool, error)
 }
