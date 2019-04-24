@@ -3,19 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/ngiyshhk/golang-clean-arch-service/service"
-	"github.com/ngiyshhk/golang-clean-arch-service/service/impl"
+	"github.com/ngiyshhk/golang-clean-arch-service/infra/database"
+	"github.com/ngiyshhk/golang-clean-arch-service/usecase"
+	"github.com/ngiyshhk/golang-clean-arch-service/usecase/impl"
 )
 
-type fugaRepositoryMockImpl struct{}
-
-func (a *fugaRepositoryMockImpl) Insert() (bool, error) {
-	return false, nil
-}
-
 func main() {
-	var hogeService service.HogeService = &impl.HogeServiceImpl{
-		FugaRepository: &fugaRepositoryMockImpl{},
+	var hogeUsecase usecase.HogeUsecase = &impl.HogeUsecaseImpl{
+		FugaRepository: &database.FugaRepositoryImpl{},
 	}
-	fmt.Println(hogeService.Create())
+	fmt.Println(hogeUsecase.Create())
 }
