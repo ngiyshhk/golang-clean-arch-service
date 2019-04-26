@@ -2,7 +2,7 @@ package impl
 
 import (
 	"github.com/ngiyshhk/golang-clean-arch-entity/model"
-	"github.com/ngiyshhk/golang-clean-arch-usecase/usecase/repository"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/repository"
 )
 
 type HogeUsecaseImpl struct {
