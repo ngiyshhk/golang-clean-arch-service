@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/ngiyshhk/golang-clean-arch-entity/model"
 	"github.com/ngiyshhk/golang-clean-arch-usecase/infra/mock"
-	"github.com/ngiyshhk/golang-clean-arch-usecase/model"
 
 	"github.com/ngiyshhk/golang-clean-arch-usecase/usecase"
 	"github.com/ngiyshhk/golang-clean-arch-usecase/usecase/impl"
