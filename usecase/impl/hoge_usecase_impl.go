@@ -1,8 +1,8 @@
 package impl
 
 import (
-	"github.com/ngiyshhk/golang-clean-arch-service/model"
-	"github.com/ngiyshhk/golang-clean-arch-service/usecase/repository"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/model"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/usecase/repository"
 )
 
 type HogeUsecaseImpl struct {

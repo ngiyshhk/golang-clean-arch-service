@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/ngiyshhk/golang-clean-arch-service/infra/mock"
-	"github.com/ngiyshhk/golang-clean-arch-service/model"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/infra/mock"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/model"
 
-	"github.com/ngiyshhk/golang-clean-arch-service/usecase"
-	"github.com/ngiyshhk/golang-clean-arch-service/usecase/impl"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/usecase"
+	"github.com/ngiyshhk/golang-clean-arch-usecase/usecase/impl"
 )
 
 func main() {
