@@ -10,4 +10,5 @@ type UserUsecase interface {
 	Create(entity *model.User) (bool, error)
 	Update(entity *model.User) (bool, error)
 	Delete(id int) (bool, error)
+	Get(id int) (*model.User, error)
 }
