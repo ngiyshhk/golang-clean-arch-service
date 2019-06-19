@@ -24,7 +24,7 @@ func TestCreateNormal(t *testing.T) {
 			return false, errors.New("not implement")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	user := &model.User{ID: 1, Name: "user1", Age: 20}
 	res, err := usecase.Create(user)
@@ -51,7 +51,7 @@ func TestCreateError(t *testing.T) {
 			return false, errors.New("not implement")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	user := &model.User{ID: 1, Name: "user1", Age: 20}
 	res, err := usecase.Create(user)
@@ -78,7 +78,7 @@ func TestUpdateNormal(t *testing.T) {
 			return false, errors.New("not implement")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	user := &model.User{ID: 1, Name: "user1", Age: 20}
 	res, err := usecase.Update(user)
@@ -105,7 +105,7 @@ func TestUpdateError(t *testing.T) {
 			return false, errors.New("not implement")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	user := &model.User{ID: 1, Name: "user1", Age: 20}
 	res, err := usecase.Update(user)
@@ -132,7 +132,7 @@ func TestDeleteNormal(t *testing.T) {
 			return true, nil
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	res, err := usecase.Delete(1)
 	if res != true {
@@ -158,7 +158,7 @@ func TestDeleteError(t *testing.T) {
 			return false, errors.New("failed to update")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	res, err := usecase.Delete(1)
 	if res != false {
@@ -188,7 +188,7 @@ func TestSelectNormal(t *testing.T) {
 			return false, errors.New("not implement")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 	res, err := usecase.Select([]int{1, 2})
 	if len(res) != len(userFixtures) {
 		t.Errorf("len(res) is not %d. got=%d", len(userFixtures), len(res))
@@ -220,7 +220,7 @@ func TestSelectError(t *testing.T) {
 			return false, errors.New("not implement")
 		},
 	}
-	usecase := &HogeUsecaseImpl{UserRepository: userRepoMock}
+	usecase := &UserUsecaseImpl{UserRepository: userRepoMock}
 
 	res, err := usecase.Select([]int{1, 2})
 	if res != nil {
